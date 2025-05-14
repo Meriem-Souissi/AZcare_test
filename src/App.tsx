@@ -14,6 +14,7 @@ const App = () => {
   };
 
   const handleSubmit = () => {
+    if (input.trim() === "") return;
     const userMessage: Message = { text: input, sender: "user" };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
